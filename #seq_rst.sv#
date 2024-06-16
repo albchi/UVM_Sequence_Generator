@@ -1,24 +1,23 @@
-`ifndef _SEQ_PKT_
-`define _SEQ_PKT_
+`ifndef _SEQ_RST_
+`define _SEQ_RST_
 
-`include "pkt.sv"
+`include "rst.sv"
 
-class seq_pkt extends uvm_sequence#(pkt);
+class seq_rst extends uvm_sequence#(rst);
 
-   `uvm_object_utils(seq_pkt)
+   `uvm_object_utils(seq_rst)
 
     virtual task body();
-          `uvm_info("XAC", "in sequence body creating ", UVM_HIGH);
-          `uvm_do_with(req, {saddr == 16'h1111; daddr == 888; rw_== 0;})
-          `uvm_do_with(req, {saddr == 16'h1111; daddr == 888; rw_== 1;})       
+          `uvm_info("XAC", "in sequence body", UVM_HIGH);
+          `uvm_do_with(req, {saddr == 16'h1111; daddr == 888;})
           `uvm_info("XAC", "in sequence body, after 1st uvm_do_with ", UVM_HIGH);
 
           `uvm_do_with(req, {saddr == 16'h2222; daddr == 888;})
-          `uvm_do_with(req, {saddr == 16'h3333; daddr == 888;})
-          `uvm_do_with(req, {saddr == 16'h4444; daddr == 888;})
+          `uvm_do_with(req, {saddr == 16'h3333; daddr == 777;})
+          `uvm_do_with(req, {saddr == 16'h4444; daddr == 777;})
           `uvm_do_with(req, {saddr == 16'h5555; daddr == 888;})
 
-           // req = pkt::type_id::create("req");
+           // req = rst::type_id::create("req");
            // start_item(req);
            // req.cmd = 4;
            // req.daddr = 16'haaaa;

@@ -1,3 +1,4 @@
 simv -l simv.log \
++UVM_OBJECTION_TRACE \
 +UVM_VERBOSITY=HIGH \
 +UVM_TESTNAME=testcase1 

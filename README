@@ -1,0 +1,6 @@
+Error-[NOA] Null object access
+/usr/synopsys/vcs/U-2023.03-SP2/etc/uvm-1.1/tlm1/uvm_sqr_connections.svh, 45
+  The object at dereference depth 1 is being used before it was 
+  constructed/allocated.
+  Please make sure that the object is allocated before using it. 
+

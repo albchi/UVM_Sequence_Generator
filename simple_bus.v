@@ -1,7 +1,7 @@
-module simple_bus(clk, rst, en, cmd, done);
+module simple_bus(clk, rst_, en, cmd, done);
 
    input clk;
-   input rst;
+   input rst_;
    input en;
    input [3:0] cmd;
    output done;
@@ -12,7 +12,7 @@ module simple_bus(clk, rst, en, cmd, done);
    reg [3:0] cnt;
 
    always @(posedge clk) begin
-      if (rst == 1'b1)  begin
+      if (rst_ == 1'b1)  begin
          done <= 1'b0;
          cmd_ff <= 8'h0;
          start_cnt <= 1'b0;

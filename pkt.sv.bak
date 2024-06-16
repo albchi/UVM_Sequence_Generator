@@ -1,5 +1,3 @@
-`ifndef _PKT_
-`define _PKT_
 class pkt extends uvm_sequence_item;
    rand bit [15:0] saddr;
    rand bit [15:0] daddr;
@@ -19,4 +17,3 @@ class pkt extends uvm_sequence_item;
       super.new();
    endfunction 
 endclass
-`endif //  _PKT_

@@ -6,7 +6,7 @@ module top;
 
    simple_bus slave0 (
       .clk(clk),
-      .rst(intf_bus_0.rst),
+      .rst_(intf_bus_0.rst_),
       .en(intf_bus_0.en),
       .cmd(intf_bus_0.cmd),
       .done(intf_bus_0.done)

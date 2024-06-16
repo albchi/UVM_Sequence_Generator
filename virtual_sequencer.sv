@@ -5,6 +5,7 @@ class virtual_sequencer extends uvm_sequencer;
    `uvm_component_utils(virtual_sequencer)
 
     seqr_pkt seqr_pkt_0;
+    seqr_rst seqr_rst_0;
  
     function new(input string name, input uvm_component parent);
        super.new(name,parent);
