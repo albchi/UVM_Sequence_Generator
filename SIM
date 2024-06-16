@@ -1,0 +1,3 @@
+simv -l simv.log \
++UVM_VERBOSITY=HIGH \
++UVM_TESTNAME=testcase1 

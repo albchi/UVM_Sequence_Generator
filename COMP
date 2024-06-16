@@ -1,0 +1,11 @@
+vcs \
+-l vcs.log \
+-full64 \
+-sverilog \
+-ntb_opts uvm-1.1 \
+-debug_access+all \
+-kdb \
+intf_simple_bus.sv \
+simple_bus.v \
+prog.sv  \
+top.v 
