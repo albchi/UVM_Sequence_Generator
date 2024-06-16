@@ -1,6 +1,5 @@
-Error-[NOA] Null object access
-/usr/synopsys/vcs/U-2023.03-SP2/etc/uvm-1.1/tlm1/uvm_sqr_connections.svh, 45
-  The object at dereference depth 1 is being used before it was 
-  constructed/allocated.
-  Please make sure that the object is allocated before using it. 
+A virtual sequence is 1) a container for your sequences (say seq_rst and seq_pkt) each  with its own uvm_do instructions and 2) coordiator executor of seq_rst and seq_rst, serially or fork
+
+A virtual sequencer is just a container for your sequencers  (say seqr_pkt) that were pre-created in agents; point to agent's sequencers
+
 
