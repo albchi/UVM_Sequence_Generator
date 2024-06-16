@@ -11,7 +11,7 @@ class seq_rst extends uvm_sequence#(rst);
 
           `uvm_info("XAC", "in rst sequence sequence body", UVM_HIGH);
           `uvm_do_with(req, {rst_== 1'b0; rst_time == 3;})
-          `uvm_do_with(req, {rst_== 1'b1; rst_time == 100;})
+          // `uvm_do_with(req, {rst_== 1'b1; rst_time == 1;})
 
           // `uvm_do_with(req, {saddr == 16'h2222; daddr == 888;})
           // `uvm_do_with(req, {saddr == 16'h3333; daddr == 888;})

@@ -16,7 +16,7 @@ class virtual_sequence extends uvm_sequence;
 
     virtual task body();
        `uvm_do_on(seq_rst_0, p_sequencer.seqr_rst_0)
-        repeat(50) @(posedge top.intf_bus_0.clk);
+        // repeat(50) @(posedge top.intf_bus_0.clk);
        `uvm_do_on(seq_pkt_0, p_sequencer.seqr_pkt_0)
     endtask 
 

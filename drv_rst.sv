@@ -22,7 +22,7 @@ class drv_rst extends uvm_driver#(rst);
 	    @(top.intf_bus_0.clk);
 	    `uvm_info("RST Driver", "got clk", UVM_HIGH);
 	    top.intf_bus_0.rst_ = req.rst_;
-                   repeat(req.rst_time)
+            repeat(req.rst_time)
    	       @(top.intf_bus_0.clk);
 	   top.intf_bus_0.rst_ = ~req.rst_;
 	   `uvm_info("RST Driving!", req.sprint(), UVM_HIGH);
